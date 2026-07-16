@@ -99,9 +99,17 @@ body {
 }
 
 .penguin-emoji {
-    font-size: 5rem;
     margin-bottom: 1rem;
     animation: bounce 2s infinite;
+    display: inline-block;
+}
+
+/* Styling for the penguin image */
+.penguin-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .home h1 {
@@ -145,8 +153,9 @@ body {
         font-size: 1rem;
     }
     
-    .penguin-emoji {
-        font-size: 3rem;
+    .penguin-image {
+        width: 150px;
+        height: 150px;
     }
 }
 

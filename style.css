@@ -72,9 +72,13 @@ body {
 
 /* Mobile navigation */
 @media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
     .nav-links {
-        gap: 1rem;
-        font-size: 0.9rem;
+        gap: 0.65rem;
+        font-size: 0.85rem;
     }
     
     .logo {
@@ -285,6 +289,68 @@ body {
     line-height: 1.6;
 }
 
+/* ===== GAME SECTION ===== */
+/* Featured game card; a video preview can be added here later */
+
+.game {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.game-card {
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.game-candy-image {
+    display: block;
+    width: 150px;
+    height: 106px;
+    margin: 0 auto 0.75rem;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 6px rgba(139, 95, 191, 0.2));
+}
+
+.game-card h2 {
+    margin-bottom: 1rem;
+    color: var(--dark-purple);
+    font-size: 2.5rem;
+}
+
+.game-card p {
+    margin: 0 auto 2rem;
+    max-width: 560px;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.game-preview {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    max-height: 480px;
+    margin: 0 auto 2rem;
+    border: 4px solid var(--light-purple);
+    border-radius: 16px;
+    background: var(--light-blue);
+    box-shadow: 0 6px 20px rgba(139, 95, 191, 0.2);
+    opacity: 1;
+    object-fit: contain;
+    transition: opacity 450ms ease-in-out;
+}
+
+.game-preview.loop-fade {
+    opacity: 0.12;
+}
+
+.game-button {
+    font-size: 1.05rem;
+}
+
 /* ===== GALLERY SECTION ===== */
 /* Grid of gallery items with photos/videos placeholders */
 
@@ -373,6 +439,7 @@ body {
 @media (max-width: 768px) {
     .about,
     .interests,
+    .game,
     .gallery {
         margin: 2rem auto;
         padding: 1.5rem;
@@ -380,6 +447,7 @@ body {
     
     .about h2,
     .interests h2,
+    .game-card h2,
     .gallery h2 {
         font-size: 2rem;
     }

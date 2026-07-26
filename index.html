@@ -10,11 +10,12 @@
     <!-- NAVIGATION BAR -->
     <nav class="navbar">
         <div class="nav-container">
-            <h1 class="logo">Claire</h1>
+            <h1 class="logo">Claire Su</h1>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#interests">Interests</a></li>
+                <li><a href="#game">Game</a></li>
                 <li><a href="#gallery">Gallery</a></li>
             </ul>
         </div>
@@ -86,6 +87,33 @@
                 <h3>Learning</h3>
                 <p>I'm passionate about learning new things. Accomplishing goals, getting good grades, and remembering that everything I do now impacts my future motivates me to do more and to not give up.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- GAME SECTION -->
+    <section id="game" class="game">
+        <div class="game-card">
+            <img src="cartoon-candy.png" alt="" class="game-candy-image" aria-hidden="true">
+            <h2>Candy Catch</h2>
+            <p>Catch the candy, avoid the bombs, and see how high you can score!</p>
+            <video id="candyCatchPreview"
+                   class="game-preview"
+                   autoplay
+                   muted
+                   loop
+                   playsinline
+                   controls
+                   preload="metadata"
+                   aria-label="Candy Catch gameplay preview">
+                <source src="candy-catch-preview.mp4" type="video/mp4">
+                Your browser does not support this gameplay preview.
+            </video>
+            <a href="https://raspberry-claire.github.io/ghost-candy-catch/"
+               class="btn game-button"
+               target="_blank"
+               rel="noopener noreferrer">
+                Play Candy Catch
+            </a>
         </div>
     </section>
 

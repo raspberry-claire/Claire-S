@@ -38,9 +38,27 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 // Observe all interest cards and gallery items for scroll animation
-document.querySelectorAll('.interest-card, .gallery-item').forEach(el => {
+document.querySelectorAll('.interest-card, .game-card, .gallery-item').forEach(el => {
     observer.observe(el);
 });
+
+// ===== GAME PREVIEW LOOP =====
+// Softens the jump between the end and beginning of the gameplay video
+
+const gamePreview = document.getElementById('candyCatchPreview');
+
+if (gamePreview) {
+    gamePreview.addEventListener('timeupdate', () => {
+        if (!Number.isFinite(gamePreview.duration)) return;
+        const timeRemaining = gamePreview.duration - gamePreview.currentTime;
+
+        if (timeRemaining < 0.55) {
+            gamePreview.classList.add('loop-fade');
+        } else if (gamePreview.currentTime < 0.75) {
+            gamePreview.classList.remove('loop-fade');
+        }
+    });
+}
 
 // ===== ACTIVE NAVIGATION LINK ===== 
 // This highlights the current section in the navigation bar as you scroll

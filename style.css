@@ -7,6 +7,7 @@
     --primary-blue: #a8d8ea;
     --light-purple: #e8d5f2;
     --light-blue: #d4f1f4;
+    --light-pink: #f7d6e8;
     --dark-purple: #8b5fbf;
     --text-dark: #4a4a4a;
     --white: #ffffff;
@@ -22,7 +23,14 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background: linear-gradient(135deg, var(--light-purple) 0%, var(--light-blue) 100%);
+    background: linear-gradient(
+        135deg,
+        var(--light-purple) 0%,
+        var(--light-blue) 25%,
+        var(--light-pink) 50%,
+        var(--light-purple) 75%,
+        var(--light-blue) 100%
+    );
     min-height: 100vh;
 }
 
@@ -233,6 +241,15 @@ body {
     padding: 0.5rem 0;
     font-size: 1.1rem;
     color: var(--text-dark);
+}
+
+.fun-facts .sub-facts {
+    margin: 0.4rem 0 0 2rem;
+}
+
+.fun-facts .sub-facts li {
+    padding: 0.3rem 0;
+    font-size: 1rem;
 }
 
 /* ===== INTERESTS SECTION ===== */
